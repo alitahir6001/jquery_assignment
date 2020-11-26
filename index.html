@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ali Tahir Exam Retake</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        
+        <script>
+            $(document).ready(function() {
+                $('input').click(function() {
+                alert("You have clicked a button!"); //alert effect
+                console.log("alert just worked");
+            });
+
+            $('p').click(function () {
+                $('p').hide('p'); // Hide effect
+                console.log("hide just worked");
+            });
+            
+            $('p').click(function() {
+                $('p').show('p'); // Show effect
+                console.log("show just worked!");
+            });
+
+            $('#hero').click(function() {
+                $('background-image').toggle('background-image'); //toggle effect (in this case I'm toggling hiding or showing the image on click)
+                $('#hero').hide('#hero');
+                $('#hero').show('#hero');
+                console.log('toggling the image just worked'); 
+            });
+
+            $('.featureboxes').click(function() {
+                $('p').slideDown('p'); // slide Down and Up effects
+                $('p').slideUp('p');
+                console.log('slidedown just worked')
+            });
+
+            $('.worldfeatures').hover(function() { // attempting to use the hover event listener
+                $('p').slideToggle('p'); // Slide toggle effect
+                $('p').slideUp('p');
+                console.log('hover just worked')
+            });
+
+            $('#bottomnav').click(function() {
+                $('li').fadeOut('li'); // Fade Out effect
+                console.log('fade out just worked')
+            });
+
+            $('#bottomnav').click(function() {
+                $('li').fadeIn('li'); // Fade In effect
+                console.log('fade in just worked')
+            });
+
+            $( '#bottomnav' ).addClass(function(){
+                $('h3').before('This is a new line'); // replaced the original h3 text with this new string using 'before()' manip
+                console.log("the add class feature just worked")
+            });
+            
+            $('.navpanel').append(function() {
+                $('').text("this is new!"); // still working out the kinks on how to target specific p elements instead of them all
+                console.log("append just worked")
+            });
+
+            $('span').before(function() { // messing around by adding "come on man!" before the header text
+                $('span').text("come on man!");
+            });
+
+        });
+    
+    
+    //The  assignment was quite clear on how long I should spend on this assignment, and I spent about 5 so far, so I must begrudingly conclude so I can keep turning these guys in. More practice needed.
+    </script>
+</head>
+
+<body>
+    <div id="container">
+            <div id="titlebar">
+                <a href="#"><h2><span>JAMES</span>    CONSULTING</h2></a>
+                    <div class="navpanel">
+                        <ul>
+                            <li><a href="#"><span>Home</span></a></li>
+                            <li><a href="#">About</a></li>
+                            <li><a href="#">Services</a></li>
+                            <li><a href="#">Projects</a></li>
+                            <li><a href="#">Clients</a></li>
+                        </ul>
+                    </div>
+            </div>
+
+            <div id="hero">
+            </div>
+
+    <div id="features">
+        <div class="featureboxes">
+            <img src="img/icon.png" alt="toolicon">            
+            <div class="featureboxheader">
+                <h2>SERVICES</h2>
+                <br>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi saepe impedit minima ipsam ullam quam aliquid cupiditate sit facilis laboriosam eos hic aliquam omnis nam voluptatibus veniam quaerat, quas nulla.</p>
+                <br>
+                <br>
+                <br>
+                <div class="button">
+                    <input type="button" value="More Info">  
+                </div>
+
+            </div>  
+        </div>
+
+        <div class="featureboxes">
+            <img src="img/icon.png" alt="toolicon">            
+            <div class="featureboxheader">
+                <h2>PROJECTS</h2>
+                <br>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi saepe impedit minima ipsam ullam quam aliquid cupiditate sit facilis laboriosam eos hic aliquam omnis nam voluptatibus veniam quaerat, quas nulla.</p>
+                <br>
+                <br>
+                <br>
+                <div class="button">
+                    <input type="button" value="More Info">  
+                </div>
+
+            </div> 
+        </div>
+
+        <div class="featureboxes">
+            <img src="img/icon.png" alt="toolicon">            
+            <div class="featureboxheader">
+                <h2>CLIENTS</h2>
+                <br>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi saepe impedit minima ipsam ullam quam aliquid cupiditate sit facilis laboriosam eos hic aliquam omnis nam voluptatibus veniam quaerat, quas nulla.</p>
+                <br>
+                <br>
+                <br>
+                <div class="button">
+                    <input type="button" value="More Info">  
+                </div>
+
+            </div> 
+        </div>
+
+
+    </div>
+
+    <div id="worldisyours">
+        <div class="worldbox1">
+            <h3>THE WORLD CAN BE YOURS!</h3>
+            <br>
+            <img src="img/building.png" alt="buildingpic">
+        </div>
+
+        <div class="worldbox2">
+            <div class="worldboxtext">
+                <p>Our goal at James Consulting is to provide effective solutions designed to boost your business, be it small or a large organization.
+                <br>
+                <br>
+                Our consultants design solutions tailored specfically to the needs of your business in order to ensure you achieve your dreams of success
+                <br>
+                <br>
+                Check out our custom solutions services.</p>
+                <br>
+                <a href="#">Learn More</a>
+            </div>
+        </div>
+        
+
+        <div class="worldbox3">
+            <h3>TESTIMONIAL</h3>
+                <div class="testimonial">
+                    <p>I'm a testomonial. Click me to edit and add text that says something nice about you and your services.</p>
+                </div>
+                <br>
+                <h6>Samantha Jones, Project Manager</h6>
+        </div>
+
+    </div>
+
+    <div id="bottomnav">
+        <ul>
+            <li><a href="#"><span>Home</span></a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Projects</a></li>
+            <li><a href="#">Clients</a></li>
+        </ul>
+    </div>
+        
+    </div>
+    
+
+
+
+</body>
+</html>
